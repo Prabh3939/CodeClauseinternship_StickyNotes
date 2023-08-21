@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/back_color"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idEdt"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:layout_above="@id/idLL2"
+        android:hint="Enter your note....."
+        android:layout_alignParentTop="true"
+        android:background="@color/back_color"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/idFABSave"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/idLL2"
+        app:tint="@color/white"
+        android:src="@drawable/ic_save"
+        android:layout_margin="3dp"
+        android:onClick="saveButton"
+        app:backgroundTint="@color/fab_color"
+        android:layout_alignParentRight="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/idLL2"
+        android:layout_alignParentBottom="true"
+        android:weightSum="3"
+        >
+        <Button
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:text="B"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:id="@+id/idBtnBold"
+            />
+        <Button
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:text="U"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:id="@+id/idBtnUnderline"
+            />
+        <Button
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:text="I"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:id="@+id/idBtnItalic"
+            />
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/idLL2"
+            android:layout_toStartOf="@id/idFABSave"
+            android:id="@+id/idLL1"
+            android:background="@color/purple_200"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_margin="5dp">
+
+            <Button
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="-"
+                android:id="@+id/idBtnReduceSize"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/idTVSize"
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:text="12"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_gravity="center"
+                android:textAlignment="center"/>
+            <Button
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="+"
+                android:id="@+id/idBtnIncreaseSize"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+
+
+
+
+        </LinearLayout>
+
+
+
+</RelativeLayout>
